@@ -1,52 +1,215 @@
-/* Сброс стилей */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    outline: none;
-}
-html {
-    height: 200%;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-strong {
-    font-weight: bold;
-} 
-input {
-    outline: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-img {
-    border: 0;
-    max-width: 100%;
-}
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
 /* Переменные */
 :root {
-    --color-primary: #235ad1;
+    --color-content: #383606;
+    --color-ascent: #779426;
+    --color-bg: #FFFCF9;
+    --color-add: #FBF2E5;
+    --color-hover: #B6C48D;
+    --color-gradient: linear-gradient(180deg, #779426 0%, #F5F5F5 15%, #99B93F 39%, #779426 63%, #C8D3A6 86%, #9BB455 100%);
+    --color-error: #FF0000;
 }
 
+/* текст */
+.title {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 69px;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+.subtitle {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+.tag {
+    font-family: 'Solena';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: var(--color-ascent);
+    position: relative;
+
+    padding-left: 15px;
+}
+.tag::before {
+    content: '/';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    margin-right: 5px;
+    font-size: 40px;
+}
+.ascent {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+
+    color: #000000;
+}
+.description {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #000000;
+}
+.button-text {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    color: var(--color-bg);
+}
+.header-items {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    color: var(--color-content) !important;
+}
+.info {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: var(--color-content);
+}
+.container {
+    max-width: 1134px !important;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+html {
+    background-color: var(--color-bg);
+}
 /* header */
+header {
+    background-color: var(--color-bg);
+}
+.before-nav {
+    min-height: 63px;
+    display: flex;
+    align-items: center;
+}
+.contactW {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addressW {
+    display: flex;
+}
+.address-item {
+    margin-left: 25px;
+}
+.address-item>p{
+    margin-bottom: 2px;
+}
+.header-logo {
+    max-width: 172px;
+    max-height: 59px;
+}
+.social-item {
+    margin-left: 10px;
+}
+nav {
+    border-top: 1px var(--color-add) solid;
+    border-bottom: 1px var(--color-add) solid;
+    min-height: 90px;
+}
+.nav-link {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.btn-ascent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 35px;
+    border-radius: 0;
+
+    border: none;
+    background: var(--color-ascent) !important;
+    outline: none;
+}
+
+ul.navbar-nav {
+    margin-top: 0 !important;
+}
+
+/* main */
+main {
+    margin-top: 153px;
+}
+.slide-content-bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 1044px;
+    height: 413px;
+
+    background: var(--color-bg);
+    opacity: 0.95;
+}
+.slide-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 413px;
+    width: 100%;
+    max-width: 651px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.slideW{
+    width: 413px;
+}
+.slide-content>.tag {
+    margin-bottom: 10px;
+}
+.slide-content>span {
+    color: var(--color-ascent);
+}
+.slide-content>h2 {
+    margin-bottom: 6px;
+}
+
+.slide-content>h3 {
+    text-transform: uppercase;
+}
+.slide-content>p {
+    text-transform: uppercase;
+}
+.slide-content>p:last-of-type {
+    margin-bottom: 40px !important;
+}

@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Элемент комфорта</title>
+    <!-- favicons -->
+    
     <!-- Стили -->
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="assets/bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/owl-carousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/owl-carousel/css/owl.theme.default.min.css">
@@ -17,22 +21,44 @@
     <header class="fixed-top">
         <div class="before-nav">
             <div class="container">
-                <div class="row">
-                    
+                <div class="contactW">
+                    <div class="addressW">
+                        <div class="address-item">
+                            <p class="info">г. Новосибирск, пр. Дзержинского, 1/4</p>
+                            <p class="info"><a href="tel:+73832878831">8 (383) 287-88-31</a></p>
+                        </div>
+                        <div class="address-item">
+                            <p class="info">г. Новосибирск, ул. Сибиряков-Гвардейцев, 49/1 к3</p>
+                            <p class="info"><a href="tel:+83832994791">8 (383) 299-47-91</a></p>
+                        </div>
+                        <div class="address-item">
+                            <p class="info">
+                                <a href="mailto:lb@element-komforta.ru">lb@element-komforta.ru</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="socialW">
+                        <a class="social-item" href="#">
+                            <img src="assets/images/icons/whatsapp.svg" alt="WhatsApp">
+                        </a>
+                        <a class="social-item" href="#">
+                            <img src="assets/images/icons/viber.svg" alt="Viber">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="" alt="Главная">
+                    <img class="header-logo" src="assets/images/logo.svg" alt="Главная">
                 </a>
                 <button class="navbar-toggler" type="menu" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <ul class="header-items navbar-nav m-auto mb-2 mb-md-0">
                         <li class="nav-item">
                             <a class="nav-link" href="#">О нас</a>
                         </li>
@@ -52,13 +78,75 @@
                             <a class="nav-link" href="#">Контакты</a>
                         </li>
                     </ul>
-                    <button class="btn btn-success" type="button">Оставить заявку</button>
+                    <button class="btn-ascent button-text" type="button">Оставить заявку</button>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-
+        <div class="owl-carousel">
+            <div>
+                <img class="slide-bg" src="assets/images/slider/banner-min.png" alt="Скидка 50%">
+                <div class="slide-content-bg"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="slideW">
+                                <div class="slide-content">
+                                    <span class="tag">Акция</span>
+                                    <h2 class="title">скидка 50%</h2>
+                                    <h3>на варочную панель или вытяжку Lex</h3>
+                                    <p>Гарантия от производителя - <span>3 года</span></p>
+                                    <div>
+                                        <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="slide-bg" src="assets/images/slider/banner-1-min.png" alt="Смеситель в подарок">
+                <div class="slide-content-bg"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="slideW">
+                                <div class="slide-content">
+                                    <span class="tag">Акция</span>
+                                    <h2 class="title">Смеситель в подарок</h2>
+                                    <h3>Смеситель в подарок</h3>
+                                    <div>
+                                        <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="slide-bg" src="assets/images/slider/banner-2-min.png" alt="Супер цена!">
+                <div class="slide-content-bg"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="slideW">
+                                <div class="slide-content">
+                                    <span class="tag">Акция</span>
+                                    <h2 class="title">Супер цена!</h2>
+                                    <h3>Столешница каменная AquaMarina 11 000 ₽ за погонный метр</h3>
+                                    <div>
+                                        <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
 
