@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Элемент комфорта</title>
     <!-- favicons -->
-    
+
     <!-- Стили -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -18,22 +18,22 @@
 </head>
 
 <body>
-    <header class="fixed-top">
+    <header>
         <div class="before-nav">
             <div class="container">
                 <div class="contactW">
                     <div class="addressW">
                         <div class="address-item">
                             <p class="info">г. Новосибирск, пр. Дзержинского, 1/4</p>
-                            <p class="info"><a href="tel:+73832878831">8 (383) 287-88-31</a></p>
+                            <p><a class="info" href="tel:+73832878831">8 (383) 287-88-31</a></p>
                         </div>
                         <div class="address-item">
                             <p class="info">г. Новосибирск, ул. Сибиряков-Гвардейцев, 49/1 к3</p>
-                            <p class="info"><a href="tel:+83832994791">8 (383) 299-47-91</a></p>
+                            <p><a class="info" href="tel:+83832994791">8 (383) 299-47-91</a></p>
                         </div>
                         <div class="address-item">
-                            <p class="info">
-                                <a href="mailto:lb@element-komforta.ru">lb@element-komforta.ru</a>
+                            <p>
+                                <a class="info" href="mailto:lb@element-komforta.ru">lb@element-komforta.ru</a>
                             </p>
                         </div>
                     </div>
@@ -78,47 +78,104 @@
                             <a class="nav-link" href="#">Контакты</a>
                         </li>
                     </ul>
-                    <button class="btn-ascent button-text" type="button">Оставить заявку</button>
+                    <button class="btn-ascent button-text" type="button" data-bs-toggle="modal"
+                        data-bs-target="#мodal1">Оставить заявку</button>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- Модальное окно -->
+    <div class="modal fade" id="мodal1" tabindex="-1" aria-labelledby="мodalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="titleW">
+                        <span class="tag">Обратная связь</span>
+                        <h5 class="title modal-title" id="мodalLabel1">Оставьте заявку</h5>
+                        <p class="description">Заполните форму ниже, и мы свяжемся с Вами!</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M22.6934 1.78675C22.7906 1.68956 22.8677 1.57418 22.9203 1.44719C22.9729 1.32021 23 1.1841 23 1.04665C23 0.909206 22.9729 0.773104 22.9203 0.646118C22.8677 0.519131 22.7906 0.403749 22.6934 0.306558C22.5963 0.209367 22.4809 0.132271 22.3539 0.0796719C22.2269 0.0270726 22.0908 0 21.9533 0C21.8159 0 21.6798 0.0270726 21.5528 0.0796719C21.4258 0.132271 21.3104 0.209367 21.2132 0.306558L11.5 10.0219L1.78675 0.306558C1.68956 0.209367 1.57418 0.132271 1.44719 0.0796719C1.32021 0.0270726 1.1841 1.02407e-09 1.04665 0C0.909206 -1.02407e-09 0.773104 0.0270726 0.646118 0.0796719C0.519131 0.132271 0.403749 0.209367 0.306558 0.306558C0.209367 0.403749 0.132271 0.519131 0.0796719 0.646118C0.0270726 0.773104 -1.02407e-09 0.909206 0 1.04665C1.02407e-09 1.1841 0.0270726 1.32021 0.0796719 1.44719C0.132271 1.57418 0.209367 1.68956 0.306558 1.78675L10.0219 11.5L0.306558 21.2132C0.110272 21.4095 0 21.6758 0 21.9533C0 22.2309 0.110272 22.4972 0.306558 22.6934C0.502844 22.8897 0.769065 23 1.04665 23C1.32425 23 1.59047 22.8897 1.78675 22.6934L11.5 12.9781L21.2132 22.6934C21.4095 22.8897 21.6758 23 21.9533 23C22.2309 23 22.4972 22.8897 22.6934 22.6934C22.8897 22.4972 23 22.2309 23 21.9533C23 21.6758 22.8897 21.4095 22.6934 21.2132L12.9781 11.5L22.6934 1.78675Z"
+                                fill="#779426" />
+                        </svg>
+                    </button>
+                </div>
+                <form action=""></form>
+                <div class="modal-body">
+                    <input class="description" type="text" placeholder="Ваше имя">
+                    <input class="description" type="tel" name="phone" placeholder="Номер телефона">
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex align-items-center">
+                        <input type="checkbox" name="check" id="check" checked>
+                        <label for="check"></label>
+                        <label class="description" for="scales">Нажимая на кнопку, Вы соглашаетесть c <a class=""
+                                href="#">Политикой конфиденциальности</a></label>
+                    </div>
+                    <button class="btn-ascent button-text" type="submit" data-bs-toggle="modal"
+                        data-bs-target="#мodal1">Отправить</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <main>
-        <div class="owl-carousel">
-            <div>
-                <img class="slide-bg" src="assets/images/slider/banner-min.png" alt="Скидка 50%">
-                <div class="slide-content-bg"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="slideW">
+        <div class="slider">
+            <div class="owl-carousel">
+                <div>
+                    <img class="slide-bg" src="assets/images/slider/banner-min.png" alt="Скидка 50%">
+                    <div class="slide-content-bg"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
                                 <div class="slide-content">
                                     <span class="tag">Акция</span>
                                     <h2 class="title">скидка 50%</h2>
-                                    <h3>на варочную панель или вытяжку Lex</h3>
-                                    <p>Гарантия от производителя - <span>3 года</span></p>
+                                    <h3 class="subtitle">на варочную панель или вытяжку Lex</h3>
+                                    <p class="ascent">Гарантия от производителя - <span>3 года</span></p>
                                     <div>
-                                        <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
+                                        <button class="btn-ascent button-text" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#мodal1">Рассчитать стоимость</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <img class="slide-bg" src="assets/images/slider/banner-1-min.png" alt="Смеситель в подарок">
-                <div class="slide-content-bg"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="slideW">
+                <div>
+                    <img class="slide-bg" src="assets/images/slider/banner-1-min.png" alt="Смеситель в подарок">
+                    <div class="slide-content-bg"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
                                 <div class="slide-content">
                                     <span class="tag">Акция</span>
                                     <h2 class="title">Смеситель в подарок</h2>
-                                    <h3>Смеситель в подарок</h3>
+                                    <h3 class="subtitle">Смеситель в подарок</h3>
                                     <div>
-                                        <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
+                                        <button class="btn-ascent button-text" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#мodal1">Рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="slide-bg" src="assets/images/slider/banner-2-min.png" alt="Супер цена!">
+                    <div class="slide-content-bg"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slide-content">
+                                    <span class="tag">Акция</span>
+                                    <h2 class="title">Супер цена!</h2>
+                                    <h3 class="subtitle">Столешница каменная AquaMarina 11 000 ₽ за погонный метр</h3>
+                                    <div>
+                                        <button class="btn-ascent button-text" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#мodal1">Рассчитать стоимость</button>
                                     </div>
                                 </div>
                             </div>
@@ -126,27 +183,430 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <img class="slide-bg" src="assets/images/slider/banner-2-min.png" alt="Супер цена!">
-                <div class="slide-content-bg"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="slideW">
-                                <div class="slide-content">
-                                    <span class="tag">Акция</span>
-                                    <h2 class="title">Супер цена!</h2>
-                                    <h3>Столешница каменная AquaMarina 11 000 ₽ за погонный метр</h3>
-                                    <div>
-                                        <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="slider-nav-container">
+                            <div class="slider-navigation"></div>
+                            <div class="slider-dots"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <section class="our-advantages">
+            <div class="container">
+                <div class="row">
+                    <div class="col titleW">
+                        <span class="tag">Наши преимущества</span>
+                        <h2 class="title">Почему нас выбирают</h2>
+                    </div>
+                </div>
+                <div class="row row-25">
+                    <div class="col-lg-3 cardW">
+                        <div class="card">
+                            <p class="ascent">20 лет продуктивной работы</p>
+                        </div>
+                        <div class="carg-img">
+                            <img src="/assets/images/icons/adv_icon 1.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 cardW">
+                        <div class="card">
+                            <p class="ascent">Нестандартные решения</p>
+                        </div>
+                        <div class="carg-img">
+                            <img src="/assets/images/icons/adv_icon 2.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 cardW">
+                        <div class="card">
+                            <p class="ascent">Высокое качество продукции</p>
+                        </div>
+                        <div class="carg-img">
+                            <img src="/assets/images/icons/adv_icon 3.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 cardW">
+                        <div class="card">
+                            <p class="ascent">Индивидуальный подход</p>
+                        </div>
+                        <div class="carg-img">
+                            <img src="/assets/images/icons/adv_icon 4.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 cardW">
+                        <div class="card">
+                            <p class="ascent">Соблюдение сроков изготовления</p>
+                        </div>
+                        <div class="carg-img">
+                            <img src="/assets/images/icons/adv_icon 5.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 cardW">
+                        <div class="card">
+                            <p class="ascent">Собственное производство</p>
+                        </div>
+                        <div class="carg-img">
+                            <img src="/assets/images/icons/adv_icon 6.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 cardW">
+                        <div class="card">
+                            <p class="ascent">Дизайн-проект, сборка и доставка бесплатно</p>
+                        </div>
+                        <div class="carg-img">
+                            <img src="/assets/images/icons/adv_icon 7.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 cardW">
+                        <div class="card">
+                            <p class="ascent">Установка под ключ</p>
+                        </div>
+                        <div class="carg-img">
+                            <img src="/assets/images/icons/adv_icon 8.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="bg-1" src="/assets/images/backgrounds/adv_pic-min.png">
+            <img class="bg-2 bg-img-op" src="/assets/images/backgrounds/1.png">
+        </section>
+        <section class="about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col titleW">
+                        <span class="tag">О компании</span>
+                        <h2 class="title">Несколько слов о нас</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="description text-green">Наша компания гарантирует потребителю длительный срок службы
+                            изделий благодаря внедрённой системе контроля и управления качеством продукции на всех
+                            этапах производства.</p>
+                        <p class="description">Выбирая поставщика кухонной мебели важно учитывать такие факторы как
+                            надежность компании, уровень квалификации работников производства, наличие широкого
+                            ассортимента предлагаемой продукции, качество товара, сервисное обслуживание и конечно же
+                            приемлемые цены.</p>
+                        <p class="description">Компания «Элемент комфорта» является официальным представителем
+                            крупнейшей Новосибирской фабрики «Рона». Фабрика существует и развивается на рынке
+                            Сибирского региона более 20 лет. Главное для нас - качественная продукция – внимание
+                            уделяется всем, даже самым незначительным, операциям в процессе производства мебели.</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="img-fluid" src="/assets/images/about/about_pic 1-min.png" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="img-fluid" src="/assets/images/about/about_pic 2-min.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col titleW">
+                        <span class="tag">Услуги</span>
+                        <h2 class="title">Сервисы, которые мы<br> предоставляем</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" role="tablist">
+                        <button class="li-popup popup subtitle active" id="tab-1" data-bs-toggle="tab"
+                            data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1"
+                            aria-selected="true">Рассчитать стоимость</button>
+                        <button class="li-popup popup subtitle" id="tab-2" data-bs-toggle="tab" data-bs-target="#tab2"
+                            type="button" role="tab" aria-controls="tab2" aria-selected="true">Шкафы-купе</button>
+                        <button class="li-popup popup subtitle" id="tab-3" data-bs-toggle="tab" data-bs-target="#tab3"
+                            type="button" role="tab" aria-controls="tab3" aria-selected="true">Мебель для детской
+                            комнаты</button>
+                        <button class="li-popup popup subtitle" id="tab-4" data-bs-toggle="tab" data-bs-target="#tab4"
+                            type="button" role="tab" aria-controls="tab4" aria-selected="true">Ванные комнаты</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="li-popup-text tab-content" role="tabpanel">
+                            <div class="tab-pane fade show active" aria-labelledby="tab-1" id="tab1" role="tabpanel">
+                                <p class="description">Мы изготавливаем и устанавливаем кухни в современном стиле.
+                                    Каждая кухня уникальна и отвечает именно Вашим индивидуальным потребностям. Вы
+                                    можете выбрать более 50 вариантов и комбинаций расцветок фасадов Вашей кухни</p>
+                                <button class="btn-ascent button-text" data-bs-toggle="tab" role="tab"
+                                    type="button">Рассчитать стоимость</button>
+                            </div>
+                            <div class="tab-pane fade show" aria-labelledby="tab-2" id="tab2" role="tabpanel">
+                                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Consequatur debitis voluptatem impedit nisi quae eaque magnam est facere dolorum,
+                                    consectetur doloribus dignissimos rem a unde facilis distinctio. Earum, nulla
+                                    voluptatibus rem harum vitae, sunt odit explicabo culpa ad voluptas accusantium.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur debitis
+                                    voluptatem impedit nisi quae eaque magnam est facere dolorum, consectetur doloribus
+                                    dignissimos rem a unde facilis distinctio. Earum, nulla voluptatibus rem harum
+                                    vitae, sunt odit explicabo culpa ad voluptas accusantium.
+                                </p>
+                                <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
+                            </div>
+                            <div class="tab-pane fade show" aria-labelledby="tab-3" id="tab3" role="tabpanel">
+                                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Consequatur debitis voluptatem impedit nisi quae eaque magnam est facere dolorum,
+                                    consectetur doloribus dignissimos rem a unde facilis distinctio. Earum, nulla
+                                    voluptatibus rem harum vitae, sunt odit explicabo culpa ad voluptas accusantium.</p>
+                                <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
+                            </div>
+                            <div class="tab-pane fade show" aria-labelledby="tab-4" id="tab4" role="tabpanel">
+                                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Consequatur debitis voluptatem impedit nisi quae eaque magnam est facere dolorum,
+                                    consectetur doloribus dignissimos rem a unde facilis distinctio. Earum, nulla
+                                    voluptatibus rem harum vitae, sunt odit explicabo culpa ad voluptas accusantium.</p>
+                                <button class="btn-ascent button-text" type="button">Рассчитать стоимость</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="projects">
+            <div class="container">
+                <div class="row">
+                    <div class="col titleW">
+                        <span class="tag">Портфолио</span>
+                        <h2 class="title">Реализованные проекты</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="prijectW">
+                            <div class="project-text">
+                                <p class="subtitle">Изготовление кухонной мебели и столешниц под заказ</p>
+                            </div>
+                            <img class="img-fluid" src="/assets/images/projects/project_pic 1-min.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="prijectW">
+                            <div class="project-text">
+                                <p class="subtitle">Мебель для детской комнаты</p>
+                            </div>
+                            <img class="img-fluid" src="/assets/images/projects/project_pic 2-min.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="prijectW">
+                            <div class="project-text">
+                                <p class="subtitle">Проектирование ванной комнаты</p>
+                            </div>
+                            <img class="img-fluid" src="/assets/images/projects/project_pic 3-min.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="prijectW">
+                            <div class="project-text">
+                                <p class="subtitle">Шкафы-купе</p>
+                            </div>
+                            <img class="img-fluid" src="/assets/images/projects/project_pic 4-min.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="prijectW">
+                            <div class="project-text">
+                                <p class="subtitle">Прихожие</p>
+                            </div>
+                            <img class="img-fluid" src="/assets/images/projects/project_pic 5-min.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg"></div>
+        </section>
+        <section class="questions">
+            <div class="container">
+                <div class="row">
+                    <div class="col titleW">
+                        <span class="tag">Часто задаваемые вопросы</span>
+                        <h2 class="title">Отвечаем на ваши вопросы</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="accordion accordion-flush">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="ascent accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tab1" aria-expanded="false" aria-controls="tab1">
+                                        Первый вопрос о том, сантехника каких производителей используеься для ванной
+                                        комнаты
+                                    </button>
+                                </h2>
+                                <div id="tab1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                                    <div class="description accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        In vero
+                                        cupiditate quidem suscipit quisquam, repellendus nulla laudantium reiciendis
+                                        deserunt.
+                                        Adipisci reiciendis sequi ad incidunt, quam minima esse itaque qui fugit maxime,
+                                        fuga
+                                        sint nostrum tenetur et eum nihil. Fugiat fuga tempora error tempore, quam sint
+                                        doloribus reprehenderit at voluptates ipsam quasi ducimus id molestias sunt
+                                        blanditiis
+                                        harum deleniti repellendus consequuntur?</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="ascent accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tab2" aria-expanded="false" aria-controls="tab2">
+                                        Первый вопрос о том, сантехника каких производителей используеься для ванной
+                                        комнаты
+                                    </button>
+                                </h2>
+                                <div id="tab2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                                    <div class="description accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        In vero
+                                        cupiditate quidem suscipit quisquam, repellendus nulla laudantium reiciendis
+                                        deserunt.
+                                        Adipisci reiciendis sequi ad incidunt, quam minima esse itaque qui fugit maxime,
+                                        fuga
+                                        sint nostrum tenetur et eum nihil. Fugiat fuga tempora error tempore, quam sint
+                                        doloribus reprehenderit at voluptates ipsam quasi ducimus id molestias sunt
+                                        blanditiis
+                                        harum deleniti repellendus consequuntur?</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="ascent accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tab3" aria-expanded="false" aria-controls="tab3">
+                                        Первый вопрос о том, сантехника каких производителей используеься для ванной
+                                        комнаты
+                                    </button>
+                                </h2>
+                                <div id="tab3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                                    <div class="description accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        In vero
+                                        cupiditate quidem suscipit quisquam, repellendus nulla laudantium reiciendis
+                                        deserunt.
+                                        Adipisci reiciendis sequi ad incidunt, quam minima esse itaque qui fugit maxime,
+                                        fuga
+                                        sint nostrum tenetur et eum nihil. Fugiat fuga tempora error tempore, quam sint
+                                        doloribus reprehenderit at voluptates ipsam quasi ducimus id molestias sunt
+                                        blanditiis
+                                        harum deleniti repellendus consequuntur?</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="ascent accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tab4" aria-expanded="false" aria-controls="tab4">
+                                        Первый вопрос о том, сантехника каких производителей используеься для ванной
+                                        комнаты
+                                    </button>
+                                </h2>
+                                <div id="tab4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                                    <div class="description accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        In vero
+                                        cupiditate quidem suscipit quisquam, repellendus nulla laudantium reiciendis
+                                        deserunt.
+                                        Adipisci reiciendis sequi ad incidunt, quam minima esse itaque qui fugit maxime,
+                                        fuga
+                                        sint nostrum tenetur et eum nihil. Fugiat fuga tempora error tempore, quam sint
+                                        doloribus reprehenderit at voluptates ipsam quasi ducimus id molestias sunt
+                                        blanditiis
+                                        harum deleniti repellendus consequuntur?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="accordion accordion-flush">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="ascent accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tab5" aria-expanded="false" aria-controls="tab5">
+                                        Первый вопрос о том, сантехника каких производителей используеься для ванной
+                                        комнаты
+                                    </button>
+                                </h2>
+                                <div id="tab5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                                    <div class="description accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        In vero
+                                        cupiditate quidem suscipit quisquam, repellendus nulla laudantium reiciendis
+                                        deserunt.
+                                        Adipisci reiciendis sequi ad incidunt, quam minima esse itaque qui fugit maxime,
+                                        fuga
+                                        sint nostrum tenetur et eum nihil. Fugiat fuga tempora error tempore, quam sint
+                                        doloribus reprehenderit at voluptates ipsam quasi ducimus id molestias sunt
+                                        blanditiis
+                                        harum deleniti repellendus consequuntur?</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="ascent accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tab6" aria-expanded="false" aria-controls="tab6">
+                                        Первый вопрос о том, сантехника каких производителей используеься для ванной
+                                        комнаты
+                                    </button>
+                                </h2>
+                                <div id="tab6" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                                    <div class="description accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        In vero
+                                        cupiditate quidem suscipit quisquam, repellendus nulla laudantium reiciendis
+                                        deserunt.
+                                        Adipisci reiciendis sequi ad incidunt, quam minima esse itaque qui fugit maxime,
+                                        fuga
+                                        sint nostrum tenetur et eum nihil. Fugiat fuga tempora error tempore, quam sint
+                                        doloribus reprehenderit at voluptates ipsam quasi ducimus id molestias sunt
+                                        blanditiis
+                                        harum deleniti repellendus consequuntur?</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="ascent accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tab7" aria-expanded="false" aria-controls="tab7">
+                                        Первый вопрос о том, сантехника каких производителей используеься для ванной
+                                        комнаты
+                                    </button>
+                                </h2>
+                                <div id="tab7" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                                    <div class="description accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        In vero
+                                        cupiditate quidem suscipit quisquam, repellendus nulla laudantium reiciendis
+                                        deserunt.
+                                        Adipisci reiciendis sequi ad incidunt, quam minima esse itaque qui fugit maxime,
+                                        fuga
+                                        sint nostrum tenetur et eum nihil. Fugiat fuga tempora error tempore, quam sint
+                                        doloribus reprehenderit at voluptates ipsam quasi ducimus id molestias sunt
+                                        blanditiis
+                                        harum deleniti repellendus consequuntur?</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="ascent accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#tab8" aria-expanded="false" aria-controls="tab8">
+                                        Первый вопрос о том, сантехника каких производителей используеься для ванной
+                                        комнаты
+                                    </button>
+                                </h2>
+                                <div id="tab8" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                                    <div class="description accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        In vero
+                                        cupiditate quidem suscipit quisquam, repellendus nulla laudantium reiciendis
+                                        deserunt.
+                                        Adipisci reiciendis sequi ad incidunt, quam minima esse itaque qui fugit maxime,
+                                        fuga
+                                        sint nostrum tenetur et eum nihil. Fugiat fuga tempora error tempore, quam sint
+                                        doloribus reprehenderit at voluptates ipsam quasi ducimus id molestias sunt
+                                        blanditiis
+                                        harum deleniti repellendus consequuntur?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
