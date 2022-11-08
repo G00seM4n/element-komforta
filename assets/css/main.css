@@ -521,8 +521,9 @@ main {
     display: block;
 }
 
-.li-popup-text>button {
+.tab-pane>button {
     margin-left: auto;
+    margin-top: 45px;
 }
 
 /* projects (Портфолио) */
@@ -683,7 +684,7 @@ main {
 
 .checkbox:checked+label:before {
     border: 1px solid var(--color-ascent);
-    background-image: url('assets/images/icons/check.svg');
+    background-image: url('../images/icons/check.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -706,14 +707,44 @@ main {
     background-color: transparent !important;
 }
 
-.accordion-button:after {
+.accordion-header {
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+}
+
+.accordion-header path {
+    transition: .2s;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none !important;
+}
+
+.accordion-header:hover .plus path {
+    stroke: var(--color-ascent);
+}
+
+.accordion-item.active .accordion-header .plus {
+    display: none;
+}
+
+.accordion-item .accordion-header .minus {
+    display: none;
+}
+
+.accordion-item.active .accordion-header .minus {
+    display: flex;
+}
+
+/* .accordion-button:after {
     background-image: url('assets/images/icons/plus.svg') !important;
 }
 
 .accordion-button:not(.collapsed):after {
     background-image: url('assets/images/icons/minus.svg') !important;
     transform: none !important;
-}
+} */
 
 .accordion-button:focus {
     border-color: none !important;
@@ -926,6 +957,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-social {
@@ -935,4 +973,23 @@ footer {
 .social-item-border {
     border: 1px solid var(--color-content);
     margin: 7.5px;
+    width: 38px;
+    height: 38px;
+}
+
+.social-item path {
+    transition: .2s;
+}
+
+.social-item-border:hover {
+    border: 1px solid var(--color-ascent);
+}
+
+.footer-modal {
+    max-width: 262px;
+    width: 100%;
+}
+
+.footer-modal>button {
+    margin-left: auto;
 }
