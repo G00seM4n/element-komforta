@@ -18,7 +18,7 @@
     line-height: 69px;
     text-transform: uppercase;
 
-    color: #000000;
+    color: var(--color-content);
 }
 
 .subtitle {
@@ -29,7 +29,7 @@
     line-height: 38px;
     text-transform: uppercase;
 
-    color: #000000;
+    color: var(--color-content);
 }
 
 .tag {
@@ -157,9 +157,10 @@ input.error {
     opacity: 1 !important;
 }
 
-html,
-main {
-    background-color: var(--color-bg);
+
+body {
+    background-color: var(--color-bg) !important;
+    position: relative;
 }
 
 /* header */
@@ -228,13 +229,11 @@ nav {
 }
 
 .nav-link {
-    margin-left: 15px;
-    margin-right: 15px;
-    display: inline-block;
-    color: var(--color-ascent);
+    margin-left: 7px;
+    margin-right: 7px;
     line-height: 1;
-    text-decoration: none;
     cursor: pointer;
+    color: var(--color-content) !important;
 }
 
 .nav-link:after {
@@ -298,7 +297,7 @@ main {
     bottom: 0;
     height: 413px;
     width: 100%;
-    max-width: 651px;
+    max-width: 656px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -393,6 +392,7 @@ main {
     margin-bottom: 120px;
     position: relative;
     z-index: 0;
+    padding-bottom: 100px;
 }
 
 .titleW {
@@ -605,6 +605,7 @@ main {
 
 .form-footer {
     display: flex;
+    justify-content: space-between;
     flex-wrap: unset;
     border: 0;
     padding: 0;
@@ -623,7 +624,8 @@ main {
     margin-left: 6px;
 }
 
-.modal .btn-close {
+.modal .btn-close,
+.modal-full  .btn-close{
     position: absolute;
     top: 30px;
     right: 30px;
@@ -655,9 +657,8 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: 36px;
+    position: relative;
 }
-
-
 
 .checkbox {
     position: absolute;
@@ -676,6 +677,7 @@ main {
     background-color: var(--color-bg);
     transition: .2s;
     cursor: pointer;
+    margin-right: 6px;
 }
 
 .checkbox+label:hover:before {
@@ -710,7 +712,7 @@ main {
 .accordion-header {
     display: flex;
     align-items: center;
-    padding-right: 16px;
+    position: relative;
 }
 
 .accordion-header path {
@@ -719,6 +721,12 @@ main {
 
 .accordion-button:not(.collapsed) {
     box-shadow: none !important;
+}
+
+.accordion-header .plus,
+.accordion-header .minus {
+    position: absolute;
+    right: 16px;
 }
 
 .accordion-header:hover .plus path {
@@ -774,10 +782,9 @@ main {
 
 /* feedback (Обратная связь)*/
 .feedback {
-    margin-bottom: 160px;
+    margin-bottom: 120px;
     display: flex;
     align-items: center;
-    padding: 60px 0;
     position: relative;
     z-index: 1;
 }
@@ -787,11 +794,14 @@ main {
     position: relative;
     width: 100%;
     max-width: 576px;
+    padding: 20px 0;
 }
 
 .feedback-img {
     position: absolute;
     right: 0;
+    height: calc(100% - 60px);
+    z-index: 1;
 }
 
 .left-bg {
@@ -800,15 +810,13 @@ main {
     width: 60%;
     background-color: var(--color-add);
     left: 0;
+    top: 0;
 }
 
 
 /* contacts (Контакты) */
 .contacts {
-    margin-bottom: 160px;
-    display: flex;
-    align-items: center;
-    padding: 30px 0;
+    margin-bottom: 120px;
     position: relative;
     z-index: 0;
 }
@@ -840,6 +848,12 @@ main {
     width: 60%;
     background-color: var(--color-add);
     right: 0;
+    top: 0px;
+}
+
+.bg-container {
+    position: relative;
+    padding: 30px 0;
 }
 
 .contacts-address {
@@ -884,6 +898,7 @@ main {
     position: absolute;
     border-bottom: 1px solid var(--color-content);
     padding-left: 0;
+    width: 100%;
 }
 
 .menu-address:hover .list {
@@ -914,6 +929,7 @@ main {
     align-items: center;
     transition: .2s;
     cursor: pointer;
+    padding: 8px 0;
 }
 
 .menu-address-btn:hover .list {
@@ -992,4 +1008,49 @@ footer {
 
 .footer-modal>button {
     margin-left: auto;
+}
+
+
+.modal-full {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+    margin: 0;
+    padding: 60px 0;
+    background-color: var(--color-bg);
+}
+
+.modal-full.active {
+    opacity: 1;
+	pointer-events: auto;
+    overflow-y: auto;
+}
+
+.modal-full .btn-ascent {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-full .btn-close:hover {
+    background-color: var(--color-ascent);
+}
+
+.bg-8 {
+    position: absolute;
+    right: 0;
+    top: 320px;
+    z-index: -1;
+}
+
+.modal-full-text {
+    margin-bottom: 35px;
 }
