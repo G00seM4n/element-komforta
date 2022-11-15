@@ -1212,7 +1212,7 @@ footer {
     background-color: var(--color-ascent);
     opacity: 0;
     transition: .2s;
-    background-image: url('../assets/images/backgrounds/7.png');
+    background-image: url('/assets/images/backgrounds/7.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-x: right;
