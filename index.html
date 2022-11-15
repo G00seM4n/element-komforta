@@ -189,6 +189,12 @@
                 </div>
                 <div class="row">
                     <div class="col">
+                        <button class="btn-ascent button-text" type="button" data-bs-toggle="modal"
+                            data-bs-target="#мodal1">Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
                         <div class="addressW">
                             <address class="address-item">
                                 <p class="info">г. Новосибирск, пр. Дзержинского, 1/4</p>
@@ -402,19 +408,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6" role="tablist">
+                    <div class="col-sm-6 col-12 position-relative" role="tablist">
                         <button class="li-popup popup subtitle active" id="tab-1" data-bs-toggle="tab"
                             data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1"
                             aria-selected="true">Кухни на заказ</button>
-                        <button class="li-popup popup subtitle" id="tab-2" data-bs-toggle="tab" data-bs-target="#tab2"
-                            type="button" role="tab" aria-controls="tab2" aria-selected="true">Шкафы-купе</button>
-                        <button class="li-popup popup subtitle" id="tab-3" data-bs-toggle="tab" data-bs-target="#tab3"
-                            type="button" role="tab" aria-controls="tab3" aria-selected="true">Мебель для детской
-                            комнаты</button>
-                        <button class="li-popup popup subtitle" id="tab-4" data-bs-toggle="tab" data-bs-target="#tab4"
-                            type="button" role="tab" aria-controls="tab4" aria-selected="true">Ванные комнаты</button>
-                    </div>
-                    <div class="col-md-6">
                         <div class="li-popup-text tab-content" role="tabpanel">
                             <div class="tab-pane fade show active" aria-labelledby="tab-1" id="tab1" role="tabpanel">
                                 <p class="description">Мы изготавливаем и устанавливаем кухни в современном стиле.
@@ -423,6 +420,10 @@
                                 <button class="btn-ascent button-text" type="button" data-bs-toggle="modal"
                                     data-bs-target="#мodal1">Заказать услугу</button>
                             </div>
+                        </div>
+                        <button class="li-popup popup subtitle" id="tab-2" data-bs-toggle="tab" data-bs-target="#tab2"
+                            type="button" role="tab" aria-controls="tab2" aria-selected="true">Шкафы-купе</button>
+                        <div class="li-popup-text tab-content" role="tabpanel">
                             <div class="tab-pane fade show" aria-labelledby="tab-2" id="tab2" role="tabpanel">
                                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Consequatur debitis voluptatem impedit nisi quae eaque magnam est facere dolorum,
@@ -436,6 +437,11 @@
                                 <button class="btn-ascent button-text" type="button" data-bs-toggle="modal"
                                     data-bs-target="#мodal1">Заказать услугу</button>
                             </div>
+                        </div>
+                        <button class="li-popup popup subtitle" id="tab-3" data-bs-toggle="tab" data-bs-target="#tab3"
+                            type="button" role="tab" aria-controls="tab3" aria-selected="true">Мебель для детской
+                            комнаты</button>
+                        <div class="li-popup-text tab-content" role="tabpanel">
                             <div class="tab-pane fade show" aria-labelledby="tab-3" id="tab3" role="tabpanel">
                                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Consequatur debitis voluptatem impedit nisi quae eaque magnam est facere dolorum,
@@ -444,6 +450,10 @@
                                 <button class="btn-ascent button-text" type="button" data-bs-toggle="modal"
                                     data-bs-target="#мodal1">Заказать услугу</button>
                             </div>
+                        </div>
+                        <button class="li-popup popup subtitle" id="tab-4" data-bs-toggle="tab" data-bs-target="#tab4"
+                            type="button" role="tab" aria-controls="tab4" aria-selected="true">Ванные комнаты</button>
+                        <div class="li-popup-text tab-content" role="tabpanel">
                             <div class="tab-pane fade show" aria-labelledby="tab-4" id="tab4" role="tabpanel">
                                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Consequatur debitis voluptatem impedit nisi quae eaque magnam est facere dolorum,
@@ -860,43 +870,49 @@
                 <div class="left-bg"></div>
                 <div class="container">
                     <div class="row feedbackW">
-                        <div class="titleW">
-                            <span class="tag">Обратная связь</span>
-                            <h2 class="title">Остались вопросы?</h2>
-                            <p class="ascent">Оставьте заявку, и наши специалисты свяжутся с Вами и проконсультируют по
-                                всем
-                                интереесующим Вас вопросам</p>
-                        </div>
-                        <form action="">
-                            <div class="form-body">
-                                <input class="description" type="text" placeholder="Ваше имя">
-                                <input class="description" type="tel" name="phone" placeholder="Номер телефона">
-                                <div class="menu-address description">
-                                    <a class="menu-address-btn">Куда вам удобней подъехать?
-                                        <svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.5 0.5L7 6L12.5 0.5L14 1L7 8L0 1L1.5 0.5Z" fill="#383606" />
-                                        </svg>
-                                    </a>
-                                    <ul class="list">
-                                        <li class="text-green">Куда вам удобней подъехать?</li>
-                                        <li class="text-green">пр. Дзержинского, 1/4, ТЦ «Практика Уюта»</li>
-                                        <li class="text-green">ул. Сибиряков-Гвардейцев, 49/1 к3, ТГ «Левобережный»</li>
-                                    </ul>
-                                </div>
+                        <div class="col">
+
+
+                            <div class="titleW">
+                                <span class="tag">Обратная связь</span>
+                                <h2 class="title">Остались вопросы?</h2>
+                                <p class="ascent">Оставьте заявку, и наши специалисты свяжутся с Вами и проконсультируют
+                                    по
+                                    всем
+                                    интереесующим Вас вопросам</p>
                             </div>
-                            <div class="form-footer">
-                                <div class="d-flex align-items-center">
-                                    <input class="checkbox" type="checkbox" name="check2" id="check2">
-                                    <label for="check2"></label>
-                                    <div class="description">Нажимая на кнопку, Вы соглашаетесть <br>c
-                                        <a class="link-text" href="#">Политикой конфиденциальности</a>
+                            <form action="">
+                                <div class="form-body">
+                                    <input class="description" type="text" placeholder="Ваше имя">
+                                    <input class="description" type="tel" name="phone" placeholder="Номер телефона">
+                                    <div class="menu-address description">
+                                        <a class="menu-address-btn">Куда вам удобней подъехать?
+                                            <svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 0.5L7 6L12.5 0.5L14 1L7 8L0 1L1.5 0.5Z" fill="#383606" />
+                                            </svg>
+                                        </a>
+                                        <ul class="list">
+                                            <li class="text-green">Куда вам удобней подъехать?</li>
+                                            <li class="text-green">пр. Дзержинского, 1/4, ТЦ «Практика Уюта»</li>
+                                            <li class="text-green">ул. Сибиряков-Гвардейцев, 49/1 к3, ТГ «Левобережный»
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <button class="btn-ascent button-text" type="submit" data-bs-toggle="modal"
-                                    data-bs-target="#мodal1">Отправить</button>
-                            </div>
-                        </form>
+                                <div class="form-footer">
+                                    <div class="d-flex align-items-center">
+                                        <input class="checkbox" type="checkbox" name="check2" id="check2">
+                                        <label for="check2"></label>
+                                        <div class="description">Нажимая на кнопку, Вы соглашаетесть <br>c
+                                            <a class="link-text" href="#">Политикой конфиденциальности</a>
+                                        </div>
+                                    </div>
+                                    <button class="btn-ascent button-text" type="submit" data-bs-toggle="modal"
+                                        data-bs-target="#мodal1">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -966,7 +982,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <div class="menu-address ascent position-relative">
                             <p class="text-green">Торговый центр</p>
                             <a class="menu-address-btn">Выберите торговый центр
@@ -986,7 +1002,7 @@
                             <p>ПН-ВС: 10:00 - 20:00 (без обеда)</p>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <div class="menu-address ascent position-relative">
                             <p class="text-green">Адрес</p>
                             <address>Дзержинского пр., 1/4, 4 этаж</address>

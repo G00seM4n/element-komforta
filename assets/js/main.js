@@ -1,11 +1,13 @@
 $(document).ready(function () {
     /* Отступ сверху */
-    let headerHeight = $('header').height();
-    $('main').css('margin-top',headerHeight);
+    $('main').css('margin-top', $('header').height());
 
     /* Меню */
     $('.burger-nav').click(function(){
         $('.mobile-menu').toggleClass('active');
+    });
+    $('.nav-link').click(function(){
+        $('.mobile-menu').removeClass('active');
     });
     
 
@@ -14,6 +16,7 @@ $(document).ready(function () {
         items: 1,
         navContainer: ".slider1 .slider-navigation",
         dotsContainer: ".slider1 .slider-dots",
+        nav: true,
         navText: ["<img class='left' src='assets/images/icons/arrow.svg'>", "<img class='right' src='assets/images/icons/arrow.svg'>"],
     });
 
