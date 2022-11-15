@@ -1499,15 +1499,72 @@ footer {
     }
 }
 
+@media (max-width: 576px) {
+    .li-popup-text {
+        margin-left: 0;
+        position: unset;
+        right: unset;
+        top: unset;
+        z-index: unset;
+        width: unset;
+    }
+
+    .tab-pane>p {
+        padding: 15px 15px 90px 15px;
+    }
+
+    .socialW>.btn-ascent {
+        display: none;
+    }
+
+    .slider1 .slide {
+        height: 500px;
+    }
+
+    .slider1 .slide-bg {
+        height: 170px !important;
+    }
+
+    .slider1 .slide-content {
+        bottom: -267px;
+        height: fit-content;
+    }
+
+    .slider1 .slide-content {
+        max-width: 100%;
+    }
+
+    .slider1 .slide-content-bg {
+        bottom: -17px;
+    }
+
+    .slider1 .slide-content button {
+        margin-top: 25px;
+    }
+
+    .slider1 .slider-nav-container {
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .owl-dot {
+        background-color: var(--color-content);
+        opacity: 0.4;
+    }
+
+    .slider-dots {
+        width: auto;
+    }
+}
+
 @media (max-width: 425px) {
     nav {
         border-top: none;
         border-bottom: 1px var(--color-add) solid;
         min-height: 70px;
-    }
-
-    .socialW>.btn-ascent {
-        display: none;
     }
 
     .burger-nav.close {
@@ -1549,19 +1606,6 @@ footer {
         margin-bottom: 30px;
     }
 
-    .slider1 .slide {
-        height: 500px;
-    }
-
-    .slider1 .slide-bg {
-        height: 170px !important;
-    }
-
-    .slider1 .slide-content {
-        bottom: -267px;
-        height: fit-content;
-    }
-
     .title {
         font-size: 34px;
         line-height: 43px;
@@ -1583,34 +1627,7 @@ footer {
         width: 100%;
     }
 
-    .slider1 .slide-content {
-        max-width: 100%;
-    }
 
-    .slider1 .slide-content-bg {
-        bottom: -17px;
-    }
-
-    .slider1 .slide-content button {
-        margin-top: 25px;
-    }
-
-    .slider1 .slider-nav-container {
-        bottom: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .owl-dot {
-        background-color: var(--color-content);
-        opacity: 0.4;
-    }
-
-    .slider-dots {
-        width: auto;
-    }
 
     .prijectW {
         height: 302px;
@@ -1673,21 +1690,8 @@ footer {
         margin-bottom: 7px;
     }
 
-    .li-popup-text {
-        margin-left: 0;
-        position: unset;
-        right: unset;
-        top: unset;
-        z-index: unset;
-        width: unset;
-    }
-
     .tab-pane {
         position: relative;
-    }
-
-    .tab-pane>p {
-        padding: 15px 15px 90px 15px;
     }
 
     .title>br {
